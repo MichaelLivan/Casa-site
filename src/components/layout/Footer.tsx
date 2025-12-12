@@ -5,8 +5,8 @@ import { Facebook, Instagram, Youtube as YouTube, MapPin, Phone, Mail, Clock } f
 const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white">
-      <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container-custom py-8 sm:py-10 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           
           {/* Coluna 1 - Informações */}
           <div className="flex flex-col items-center md:items-start">
@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                 className="h-12 md:h-13 object-contain"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = '/dist/Logo Casa 524.png';
+                  target.src = '/Logo Casa 524.png';
                 }}
               />
             </div>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           
           {/* Coluna 2 - Links Rápidos */}
           <div>
-            <h3 className="text-xl font-bold mb-4 font-playfair">Links Rápidos</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 font-playfair">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="footer-link">Início</Link>
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
         </div>
         
         {/* Mapa */}
-        <div className="mt-10 h-64 rounded-lg overflow-hidden">
+        <div className="mt-6 sm:mt-8 md:mt-10 h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.96446239422!2d-38.482818!3d-12.990027!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b11a4cd03fd%3A0xf37f4e2583d06396!2sCASA!5e0!3m2!1spt-BR!2sbr!4v1747924185964!5m2!1spt-BR!2sbr" 
             width="100%" 

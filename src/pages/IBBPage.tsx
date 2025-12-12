@@ -22,8 +22,8 @@ const StarRating: React.FC<{ star: number; rating: number; onRatingChange: (rati
       className="focus:outline-none"
     >
       <Star
-        size={32}
-        className={`transition-colors ${
+        size={28}
+        className={`sm:w-8 sm:h-8 transition-colors ${
           star <= (hoverRating || rating)
             ? 'fill-yellow-400 text-yellow-400'
             : 'fill-gray-300 text-gray-300'
@@ -111,10 +111,10 @@ const IBBPage: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-church-blue text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-playfair">RadahCollege</h1>
-          <p className="max-w-2xl mx-auto text-gray-300">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 bg-church-blue text-white">
+        <div className="container-custom text-center px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 font-playfair">RadahCollege</h1>
+          <p className="text-sm sm:text-base max-w-2xl mx-auto text-gray-300">
             Formando discípulos e líderes para a expansão do Reino de Deus através 
             de ensino bíblico de qualidade e formação integral.
           </p>
@@ -124,39 +124,39 @@ const IBBPage: React.FC = () => {
       {/* Sobre o RadahCollege */}
       <section className="section bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
             <div>
               <h2 className="section-title">Sobre o RadahCollege</h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
                 O RadahCollege foi fundado em 2022 com o objetivo de oferecer formação 
                 teológica e ministerial de qualidade, acessível e direta.
               </p>
               
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
                 Nossa missão é formar discípulos maduros e líderes capacitados para servir a Deus na igreja 
                 e na sociedade, através de um ensino bíblico sólido e uma metodologia prática e relevante.
               </p>
               
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-church-red bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
-                    <BookOpen size={20} className="text-church-red" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-church-red bg-opacity-10 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                    <BookOpen size={18} className="sm:w-5 sm:h-5 text-church-red" />
                   </div>
-                  <p className="text-gray-600">Ensino bíblico sólido e contextualizado</p>
+                  <p className="text-sm sm:text-base text-gray-600">Ensino bíblico sólido e contextualizado</p>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-church-red bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
-                    <Users size={20} className="text-church-red" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-church-red bg-opacity-10 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                    <Users size={18} className="sm:w-5 sm:h-5 text-church-red" />
                   </div>
-                  <p className="text-gray-600">Professores qualificados e experientes</p>
+                  <p className="text-sm sm:text-base text-gray-600">Professores qualificados e experientes</p>
                 </div>
                 
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-church-red bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
-                    <GraduationCap size={20} className="text-church-red" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-church-red bg-opacity-10 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                    <GraduationCap size={18} className="sm:w-5 sm:h-5 text-church-red" />
                   </div>
-                  <p className="text-gray-600">Formação teórica e prática</p>
+                  <p className="text-sm sm:text-base text-gray-600">Formação teórica e prática</p>
                 </div>
               </div>
               
@@ -183,7 +183,7 @@ const IBBPage: React.FC = () => {
             e chamados ministeriais. Conheça nossas opções:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {courses.map((course, index) => (
               <CurriculumCard 
                 key={index}
@@ -216,14 +216,14 @@ const IBBPage: React.FC = () => {
             >
               {graduationPhotos.map((photo, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative h-[500px]">
+                  <div className="relative h-[300px] sm:h-[400px] md:h-[500px]">
                     <img 
                       src={photo.url} 
                       alt={photo.caption} 
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
-                      <p className="text-white text-xl">{photo.caption}</p>
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 sm:p-6">
+                      <p className="text-white text-sm sm:text-base md:text-xl">{photo.caption}</p>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -232,9 +232,9 @@ const IBBPage: React.FC = () => {
           </div>
           
           <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-8 text-church-blue font-playfair text-center">Deixe Seu Depoimento</h3>
-            <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-              <form className="space-y-6" onSubmit={handleSubmit}>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-church-blue font-playfair text-center">Deixe Seu Depoimento</h3>
+            <div className="max-w-3xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg">
+              <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Seu Nome
@@ -273,7 +273,7 @@ const IBBPage: React.FC = () => {
                   <label htmlFor="rating" className="block text-sm font-medium text-gray-700 mb-2">
                     Avaliação
                   </label>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-2">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <StarRating
                         key={star}
@@ -283,7 +283,7 @@ const IBBPage: React.FC = () => {
                       />
                     ))}
                     {formData.rating > 0 && (
-                      <span className="ml-2 text-sm text-gray-600">
+                      <span className="text-xs sm:text-sm text-gray-600">
                         {formData.rating} {formData.rating === 1 ? 'estrela' : 'estrelas'}
                       </span>
                     )}

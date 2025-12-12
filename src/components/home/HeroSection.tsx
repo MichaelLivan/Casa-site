@@ -43,43 +43,40 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           ref={videoRef}
-          className="w-full h-full object-cover scale-125 md:scale-120 lg:scale-110"
+          className="w-full h-full object-cover scale-150 sm:scale-140 md:scale-125 lg:scale-110"
           style={{ objectPosition: 'center top' }}
           autoPlay
           muted
           playsInline
         >
-          <source src="/dist/video-topo.mp4" type="video/mp4" />
+          <source src="/video-topo.mp4" type="video/mp4" />
           Seu navegador não suporta o elemento de vídeo.
         </video>
         <div className="absolute inset-0 bg-church-blue bg-opacity-60" />
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 flex flex-col justify-center items-center h-full text-center text-white">
-        <div className="mb-8">
+      <div className="container-custom relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4 sm:px-6">
+        <div className="mb-6 sm:mb-8">
           <img 
             src="/Logo Casa 396.png" 
             alt="Logo CASA" 
-            className={`h-20 md:h-38 mx-auto object-contain filter drop-shadow-2xl transition-opacity duration-300 ${logoLoaded ? 'opacity-100' : 'opacity-0'}`}
+            className={`h-16 sm:h-24 md:h-32 lg:h-40 mx-auto object-contain filter drop-shadow-2xl transition-opacity duration-300 ${logoLoaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setLogoLoaded(true)}
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = '/dist/Logo Casa 396.png';
+              target.src = '/Logo Casa 396.png';
               setLogoLoaded(true);
             }}
           />
         </div>
-        {/* <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-slide-up font-light tracking-wide">
-          Centro Apostólico Salvador
-        </p> */}
-        <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
-          <a href="/ibb" className="btn-primary">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-up w-full sm:w-auto px-4 sm:px-0">
+          <a href="/ibb" className="btn-primary text-center">
             Nossa Escola
           </a>
           <a
             href="/historia"
-            className="btn-outline border-white text-white hover:bg-white hover:text-church-blue"
+            className="btn-outline border-white text-white hover:bg-white hover:text-church-blue text-center"
           >
             Conheça Nossa Igreja
           </a>
@@ -89,10 +86,10 @@ const HeroSection: React.FC = () => {
           to="missao-visao-valores"
           smooth={true}
           duration={500}
-          className="absolute bottom-8 cursor-pointer animate-bounce"
+          className="absolute bottom-4 sm:bottom-8 cursor-pointer animate-bounce"
           aria-label="Rolar para baixo"
         >
-          <ChevronDown size={36} className="text-white" />
+          <ChevronDown size={28} className="sm:w-9 sm:h-9 text-white" />
         </Link>
       </div>
     </section>

@@ -5,10 +5,10 @@ const ContactPage: React.FC = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-church-blue text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-playfair">Contato</h1>
-          <p className="max-w-2xl mx-auto text-gray-300">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 bg-church-blue text-white">
+        <div className="container-custom text-center px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 font-playfair">Contato</h1>
+          <p className="text-sm sm:text-base max-w-2xl mx-auto text-gray-300">
             Estamos sempre disponíveis para atender você. Entre em contato conosco 
             através dos canais abaixo.
           </p>
@@ -22,7 +22,7 @@ const ContactPage: React.FC = () => {
             <div>
               <h2 className="section-title text-center mx-auto after:mx-auto">Informações de Contato</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10">
                 <div className="flex items-start">
                   <div className="w-12 h-12 rounded-full bg-church-red bg-opacity-10 flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin size={24} className="text-church-red" />
@@ -76,7 +76,7 @@ const ContactPage: React.FC = () => {
               </div>
               
               {/* Mapa */}
-              <div className="rounded-lg overflow-hidden shadow-lg h-72">
+              <div className="rounded-lg overflow-hidden shadow-lg h-64 sm:h-72">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d485.96446239422!2d-38.482818!3d-12.990027!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b11a4cd03fd%3A0xf37f4e2583d06396!2sCASA!5e0!3m2!1spt-BR!2sbr!4v1747924185964!5m2!1spt-BR!2sbr" 
                   width="100%" 

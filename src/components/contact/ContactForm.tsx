@@ -91,24 +91,24 @@ const ContactForm: React.FC = () => {
   };
   
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8">
-      <h3 className="text-2xl font-bold mb-6 text-church-blue">Envie-nos uma mensagem</h3>
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
+      <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-church-blue">Envie-nos uma mensagem</h3>
       
       {status.submitted && (
-        <div className={`mb-6 p-4 rounded-lg ${status.success ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+        <div className={`mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg ${status.success ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
           <div className="flex items-center">
             {status.success ? (
-              <Check className="mr-2 flex-shrink-0" />
+              <Check className="mr-2 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
             ) : (
-              <AlertCircle className="mr-2 flex-shrink-0" />
+              <AlertCircle className="mr-2 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5" />
             )}
-            <p>{status.message}</p>
+            <p className="text-sm sm:text-base">{status.message}</p>
           </div>
         </div>
       )}
       
       <form onSubmit={handleDemoSubmit}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
           <div>
             <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Nome Completo*</label>
             <input

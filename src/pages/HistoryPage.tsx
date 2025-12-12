@@ -11,43 +11,43 @@ import 'swiper/css/pagination';
 const HistoryPage: React.FC = () => {
   const historyPhotos = [
     {
-      url: "/dist/culto12-2018.jpg",
+      url: "/culto12-2018.jpg",
       caption: "O inicio - Primeiro templo"
     },
     {
-      url: "/dist/culto01-2019.2.jpg",
+      url: "/culto01-2019.2.jpg",
       caption: "O ínicio - Primeiro templo"
     },
     {
-      url: "/dist/culto06-2019.jpg",
+      url: "/culto06-2019.jpg",
       caption: "Mudança para o templo atual - reforma"
     },
     {
-      url: "/dist/reforma.jpg",
+      url: "/reforma.jpg",
       caption: "Mudança para o templo atual - reforma"
     },
     {
-      url: "/dist/Culto2020.webp",
+      url: "/Culto2020.webp",
       caption: "Culto durante a pandemia (2020)"
     },
     {
-      url: "/dist/Culto2020.2.webp",
+      url: "/Culto2020.2.webp",
       caption: "Culto durante a pandemia (2020)"
     },
     {
-      url: "/dist/culto2024.webp",
+      url: "/culto2024.webp",
       caption: "(2024)"
     },
     {
-      url: "/dist/equipePastoral.webp",
+      url: "/equipePastoral.webp",
       caption: "Toda equipe de oficiais (2024)"
     },
     {
-      url: "/dist/Todos os oficiais.jpg",
+      url: "/Todos os oficiais.jpg",
       caption: "Todos os oficiais"
     },
     {
-      url: "/dist/culto2025.jpg",
+      url: "/culto2025.jpg",
       caption: "(2025)"
     }
   ];
@@ -55,10 +55,10 @@ const HistoryPage: React.FC = () => {
   return (
     <div>
       {/* Hero Section sem imagem de fundo */}
-      <section className="pt-32 pb-20 bg-church-blue text-white text-center relative">
-        <div className="container-custom relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-playfair">Nossa História</h1>
-          <p className="max-w-2xl mx-auto">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 bg-church-blue text-white text-center relative">
+        <div className="container-custom relative z-10 px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 font-playfair">Nossa História</h1>
+          <p className="text-sm sm:text-base max-w-2xl mx-auto">
             Uma jornada de fé, perseverança e conquistas ao longo dos anos. 
             Conheça como Deus tem escrito nossa história.
           </p>
@@ -101,22 +101,20 @@ const HistoryPage: React.FC = () => {
             >
               {historyPhotos.map((photo, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative h-[500px] bg-gray-900 flex items-center justify-center">
+                  <div className="relative h-[300px] sm:h-[400px] md:h-[500px] bg-gray-900 flex items-center justify-center">
                     <img 
                       src={photo.url} 
                       alt={photo.caption || `Foto ${index + 1}`} 
                       className={`w-full h-full ${photo.url.includes('equipePastoral') ? 'object-contain' : 'object-cover'}`}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        // Tenta carregar da raiz se não encontrar em /dist/
-                        if (target.src.includes('/dist/')) {
-                          target.src = photo.url.replace('/dist/', '/');
-                        }
+                        // Fallback para tentar carregar novamente
+                        console.error('Erro ao carregar imagem:', photo.url);
                       }}
                     />
                     {photo.caption && (
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
-                        <p className="text-white text-xl">{photo.caption}</p>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 sm:p-6">
+                        <p className="text-white text-sm sm:text-base md:text-xl">{photo.caption}</p>
                       </div>
                     )}
                   </div>

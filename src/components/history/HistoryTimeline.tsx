@@ -35,25 +35,25 @@ const HistoryTimeline: React.FC = () => {
       {/* Linha vertical central */}
       <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-church-red"></div>
       
-      <div className="space-y-12">
+      <div className="space-y-8 sm:space-y-12">
         {timelineEvents.map((event, index) => (
           <div key={index} className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
             {/* Marcador central para desktop */}
             <div className="hidden md:flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full bg-church-red text-white flex items-center justify-center font-bold z-10">
+              <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-church-red text-white flex items-center justify-center font-bold z-10 text-sm lg:text-base">
                 {event.year}
               </div>
             </div>
             
             {/* Conteúdo */}
-            <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
+            <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:pr-8 lg:pr-12 md:text-right' : 'md:pl-8 lg:pl-12'}`}>
               {/* Marcador para mobile */}
-              <div className="md:hidden w-12 h-12 rounded-full bg-church-red text-white flex items-center justify-center font-bold mb-4 mx-auto">
+              <div className="md:hidden w-12 h-12 rounded-full bg-church-red text-white flex items-center justify-center font-bold mb-4 mx-auto text-sm">
                 {event.year}
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold mb-2 text-church-blue">{event.title}</h3>
-                <p className="text-gray-600">{event.description}</p>
+              <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 text-church-blue">{event.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600">{event.description}</p>
               </div>
             </div>
           </div>

@@ -13,16 +13,16 @@ const PastorCard: React.FC<PastorCardProps> = ({ name, role, bio, imageUrl, reve
 
   return (
     <div className={`flex flex-col ${reversed ? 'md:flex-row-reverse' : 'md:flex-row'} bg-white rounded-lg shadow-lg overflow-hidden`}>
-      <div className="md:w-1/2 relative bg-gray-100 min-h-[300px] md:min-h-[400px] flex items-center justify-center">
+      <div className="md:w-1/2 relative bg-gray-100 min-h-[250px] sm:min-h-[300px] md:min-h-[400px] flex items-center justify-center">
         {!imageLoaded && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 border-4 border-church-blue border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-church-blue border-t-transparent rounded-full animate-spin"></div>
           </div>
         )}
         <img 
           src={imageUrl} 
           alt={`Pastor ${name}`} 
-          className={`w-full h-full min-h-[300px] md:min-h-[400px] object-contain md:object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`w-full h-full min-h-[250px] sm:min-h-[300px] md:min-h-[400px] object-contain md:object-cover transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
           loading="lazy"
           onLoad={() => setImageLoaded(true)}
           onError={(e) => {
@@ -35,11 +35,11 @@ const PastorCard: React.FC<PastorCardProps> = ({ name, role, bio, imageUrl, reve
           }}
         />
       </div>
-      <div className="md:w-1/2 p-8 flex flex-col justify-center">
-        <h3 className="text-2xl font-bold mb-2 text-church-blue">{name}</h3>
-        <p className="text-church-red font-medium mb-4">{role}</p>
+      <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
+        <h3 className="text-xl sm:text-2xl font-bold mb-2 text-church-blue">{name}</h3>
+        <p className="text-sm sm:text-base text-church-red font-medium mb-4">{role}</p>
         {bio && (
-          <div className="prose max-w-none text-gray-600">
+          <div className="prose max-w-none text-sm sm:text-base text-gray-600">
             <p>{bio}</p>
           </div>
         )}

@@ -42,7 +42,7 @@ const Header: React.FC = () => {
     onLoad={() => setLogoLoaded(true)}
     onError={(e) => {
       const target = e.target as HTMLImageElement;
-      target.src = '/dist/Logo Casa 521.png';
+      target.src = '/Logo Casa 521.png';
       setLogoLoaded(true);
     }}
   />
@@ -81,9 +81,8 @@ const Header: React.FC = () => {
       </div>
       
       {/* Mobile Menu */}
-      <div className={`md:hidden fixed top-20 md:top-24 left-0 w-full bg-black z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-
-        <div className="container-custom py-4 flex flex-col space-y-4">
+      <div className={`md:hidden fixed top-20 md:top-24 left-0 w-full bg-black bg-opacity-95 backdrop-blur-sm z-50 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible max-h-screen' : 'opacity-0 invisible max-h-0 overflow-hidden'}`}>
+        <div className="container-custom py-6 flex flex-col space-y-4">
           <NavLink 
             to="/" 
             className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}

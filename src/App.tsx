@@ -17,7 +17,7 @@ function App() {
         <div 
           className="fixed inset-0 z-0 pointer-events-none"
           style={{
-            backgroundImage: `url('/Elementos casa 7.png'), url('/dist/Elementos casa 7.png')`,
+            backgroundImage: `url('/Elementos casa 7.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
