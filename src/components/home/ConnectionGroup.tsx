@@ -9,7 +9,8 @@ const ConnectionGroup: React.FC = () => {
           
           {/* Texto */}
           <div className="text-center mb-12">
-            <h2 className="section-title">De Casa em Casa</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-church-blue font-playfair">De Casa em Casa</h2>
+            <div className="w-16 sm:w-20 md:w-24 h-1 bg-church-red mx-auto mb-6 sm:mb-8"></div>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               De Casa em Casa são pequenos grupos que se reúnem semanalmente em lares para compartilhar a boa palavra, 
               estudar e fortalecer relacionamentos. É o lugar ideal para crescer na fé e desenvolver relacionamentos genuínos.
