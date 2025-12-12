@@ -70,13 +70,6 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <Clock className="mr-2 flex-shrink-0 mt-1" size={18} />
                 <div>
-                  <p className="font-medium">Culto de Oração</p>
-                  <p className="text-gray-300">Sexta-feira - 19h - 21h</p>
-                </div>
-              </li>
-              <li className="flex items-start">
-                <Clock className="mr-2 flex-shrink-0 mt-1" size={18} />
-                <div>
                   <p className="font-medium">Culto de Celebração</p>
                   <p className="text-gray-300">Domingo - 10h - 12h e 18h - 20h</p>
                 </div>

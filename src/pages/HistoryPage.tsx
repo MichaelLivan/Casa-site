@@ -40,7 +40,7 @@ const HistoryPage: React.FC = () => {
     },
     {
       url: "/equipePastoral.webp",
-      caption: "Toda equipe de oficiais (2024)"
+      caption: "Equipe pastoral"
     },
     {
       url: "/Todos os oficiais.jpg",
