@@ -61,9 +61,9 @@ const Header: React.FC = () => {
           <NavLink to="/quem-somos" className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}>
             Quem Somos
           </NavLink>
-          <NavLink to="/ibb" className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}>
+          {/* <NavLink to="/ibb" className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}>
             RadahCollege
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/contato" className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}>
             Contato
           </NavLink>
@@ -104,13 +104,13 @@ const Header: React.FC = () => {
           >
             Quem Somos
           </NavLink>
-          <NavLink 
+          {/* <NavLink 
             to="/ibb" 
             className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}
             onClick={closeMenu}
           >
             RadahCollege
-          </NavLink>
+          </NavLink> */}
           <NavLink 
             to="/contato" 
             className={({ isActive }) => isActive ? 'nav-link-active' : 'nav-link'}

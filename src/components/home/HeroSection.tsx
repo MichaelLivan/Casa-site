@@ -71,9 +71,9 @@ const HeroSection: React.FC = () => {
           />
         </div>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-up w-full sm:w-auto px-4 sm:px-0">
-          <a href="/ibb" className="btn-primary text-center">
+          {/* <a href="/ibb" className="btn-primary text-center">
             Nossa Escola
-          </a>
+          </a> */}
           <a
             href="/historia"
             className="btn-outline border-white text-white hover:bg-white hover:text-church-blue text-center"

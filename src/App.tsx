@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import HistoryPage from './pages/HistoryPage';
 import TeamPage from './pages/TeamPage';
-import IBBPage from './pages/IBBPage';
+// import IBBPage from './pages/IBBPage';
 import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
               <Route path="/contato" element={<ContactPage />} />
               <Route path="/historia" element={<HistoryPage />} />
               <Route path="/quem-somos" element={<TeamPage />} />
-              <Route path="/ibb" element={<IBBPage />} />
+              {/* <Route path="/ibb" element={<IBBPage />} /> */}
             </Routes>
           </main>
           <Footer />
